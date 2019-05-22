@@ -1,0 +1,56 @@
+Hero does not require the presence of a SuperHero class. Since Hero is not 
+SuperHero, the SuperHero class inherits from the Hero class.
+We cannot see Hero in the SuperHero.cpp file, but we can see it in the 
+SuperHero.h file. The SuperHero class inherits not only on the properties of the 
+Hero class, but also on some of the methods declared within the Parent class. 
+Therefore, in this case, the SuperHero class needs to know the existence of the
+Hero class.
+Ancient Battle! has been printed out.
+Inheritance is an important feature of object-oriented programming in addition 
+to data abstraction and encapsulation.
+Inheritance provides users with a high level of code reusability and provides a
+grammatical foundation of polymorphism by constructing hierarchical 
+relationships between classes.
+Class inheritance means inheriting all the member variables and member functions
+of a previously defined class and creating a new class.
+A previously defined class is called a base class or a parent class, and a newly 
+created class through inheritance is also called a derived class or a child 
+class.
+The advantage of class inheritance is that you can reuse existing classes, and 
+you can write common parts in the base class to remove duplicates in the derived 
+class.
+A derived class is a newly created class inheriting all the properties of a base 
+class. The access control directive sets the access control authority of a 
+derived class that can use members of the base class. If the access control 
+directive is omitted, the access control authority of the derived class is set 
+to private.
+You can use a comma to specify several base classes to inherit.
+Single inheritance refers to the case where a base class inherits from a derived 
+class.
+Multiple inheritance refers to cases where multiple base classes are inherited.
+The characteristics of the derived class are that you must write your own 
+constructor, that all the member variables accessible to the base class are 
+stored, that all member functions accessible to the base class can be used, you 
+can add as many members as you need.
+The derived class constructor uses the base class constructor. This is because 
+the derived class constructor can not access the private members of the base 
+class. Therefore, the base class's constructor must be used to initialize the 
+private member of the base class. If you do not specify a constructor for the 
+base class, the program will use the default constructor for the base class.
+The derived class's object creation order is:
+1. When you create an object of a derived class, the program first calls the 
+base class's constructor. At this time, the base class constructor proceeds to 
+initialize the inherited member variable.
+2. The derived class's constructor is then called.
+3. When the lifetime of the derived class expires, the derived class destructor 
+is called first, and then the base class destructor is called.
+
+Quiz 6 reflection
+3. Given a C++ class named Storm
+a) Write down one line of code that invoke the ostream insertion operator.
+Storm x;
+cout < x;
+
+b) Write down the function prototype such that the ostream insertion operator is 
+overloaded.
+std::ostream& operator << ( std:: ostream& os, const Storm &s);

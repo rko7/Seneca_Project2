@@ -1,0 +1,28 @@
+/***********************************************************************
+// OOP244 Workshop 3
+// Student Name: Ryeoeul Ko
+// Section Name: OOP244SAA
+// Date 2019/01/31
+/////////////////////////////////////////////////////////////////
+***********************************************************************/
+
+#ifndef BOOK_H
+#define BOOK_H
+namespace sict {
+	const int max_title_size = 33;
+	const int max_name_size = 17;
+	const double min_isbn_value = 1000000000000;
+	const double max_isbn_value = 9999999999999;
+
+	class Book {
+	  private:
+		char familyName;
+		char givenName;
+		double isbn;
+	   public:        
+		void set(const char* familyName, const char* givenName, const char* title, double isbn);
+		bool isEmpty() const;
+		void display() const;
+	};
+}
+#endif // !CRA_ACCOUNT_H

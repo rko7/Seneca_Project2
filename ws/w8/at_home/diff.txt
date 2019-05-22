@@ -1,0 +1,14 @@
+In line number 15 of your output:
+The output should be:
+Monthly Fee: 2.00
+           ^
+But your output is: 
+Monthly Fee : 2.00
+           ^
+
+Unmatched character details:
+The character in column 12 is supposed to be:
+  [:] ASCII code(58)
+but you printed
+  [Space] ASCII code(32)
+

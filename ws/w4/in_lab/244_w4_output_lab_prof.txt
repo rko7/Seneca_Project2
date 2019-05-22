@@ -1,0 +1,40 @@
+Script started on Sat 02 Feb 2019 07:25:12 PM EST
+[38;5;9mBegin Testing the Program!
+--------------------------[0m
+
+----------------------------------------
+Testing the validation logic
+(only traveler 9 should be valid)
+----------------------------------------
+Traveler 1: not valid
+Traveler 2: not valid
+Traveler 3: not valid
+Traveler 4: not valid
+Traveler 5: not valid
+Traveler 6: not valid
+Traveler 7: not valid
+Traveler 8: not valid
+Traveler 9: valid
+Traveler 10: not valid
+Traveler 11: not valid
+Traveler 12: not valid
+Traveler 13: not valid
+Traveler 14: not valid
+----------------------------------------
+
+----------------------------------------
+Testing the display function
+----------------------------------------
+Vanessa Williams goes to Paris
+Mike Jones goes to Tokyo
+Alice Miller goes to Rome
+--> Not a valid traveler! <--
+John Smith goes to Toronto
+--> Not a valid traveler! <--
+----------------------------------------
+
+
+[38;5;9m------------------------
+End Testing the Program![0m
+
+Script done on Sat 02 Feb 2019 07:25:12 PM EST

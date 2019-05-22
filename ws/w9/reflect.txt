@@ -1,0 +1,68 @@
+If I try to put my template functions in Data.cpp I will have an error when I 
+compile it. The template function embodied at compile time. Therefore, it is a 
+problem if the implementation is in another header file or cpp file. In other 
+words, in order to concrete the template, the template definition must be in the 
+same header file or cpp file. Therefore, declaring a template in a header file 
+and defining a template in a cpp file causes compilation errors at compile time. 
+So these is why I move all functions to Data.h, my source code compile without 
+errors.
+We need to define the template function above the main (). The thing that we 
+include header is the same as connecting the code there, so it works. However, 
+if it is below the main function, it may not work because the main function is 
+not defined when it is executed.
+We can do this through function overloading on integers and doubles. However, it 
+works same except for the difference in parameters. So it looks like creating a 
+duplicate function even though the parameter types are different. But with the 
+template function, we do not need to use the same function twice for different 
+parameters. It will allow all types but works the same way. Also, since the 
+program is made before the program is executed, it does not slow down the 
+program even if we use it a lot.
+They are logically same. However, there are some situations that you have to use 
+only one of them. If you use a type associated with another template parameter, 
+you can only use <typename T>. When explicitly instantiating a template, you can 
+only use <class T>. Also you must use <class T> in the case when the type 
+declaration of a template declaration contains a template.
+A template is a framework in which functions and classes are created in advance 
+to be called regardless of their data types. The reason for writing a template 
+is that existing functions need to define a new function even if the function 
+and content are the same when the type is different. However, if you use a 
+template, even if the data type is different, the compiler will call it if you 
+define only one template. The number of codes is reduced and it is easier for 
+the programmer. There is a drawback that it can slow down because it copies 
+functions at compile time, but this is not the speed of execution, so it is 
+advantageous to use a template if you do not have to worry about compilation 
+speed. The specialization of the function template allows the user to 
+arbitrarily define a template function of a predetermined type, so that when the 
+template is called with the corresponding data type, the created function is 
+called. The reason for this is that if you put a string in a function template 
+that simply compares the size of two variables, it will pass the address value, 
+so if the return value does not appear as intended, it will be used as a 
+function template specialization. Like a function template, a class can be 
+defined as a template. But there are some differences. Unlike a function 
+template, it is not possible to omit a data type declaration when calling a 
+class template. Class templates are also separable declarations and definitions. 
+You also need to insert a separate cpp file into the main file, or define the 
+template without splitting the template. You can also create an object with a 
+class template, and you can put an object of a class template as an argument to 
+a parameter of a general function, or you can declare a friend as a general 
+function inside a class template. Class templates can also be specialized, such 
+as function templates, for the purpose of applying a specific behavioral style 
+to the type. However, there is a 'specialization' that specializes only one of 
+several parameters.
+Quiz 9 reflection
+B.2.
+D.2.
+B.2.
+B::44,55 <-
+B::11,22 <-  I wrote these two order wrongly
+D::Q
+
+Quiz 10 reflection
+hello:
+B::f1::14
+byebye:
+B::f2::-874
+hello:
+D::f1::40[99] <- didn't wrote [99]
+byebye:
+B::f2::-848

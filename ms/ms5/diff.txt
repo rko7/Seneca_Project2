@@ -1,0 +1,14 @@
+In line number 375 of your output:
+The output should be:
+Please enter the number of purchased items: a
+                                            ^
+But your output is: 
+Please enter the number of purchased items: 22
+                                            ^
+
+Unmatched character details:
+The character in column 45 is supposed to be:
+  [a] ASCII code(97)
+but you printed
+  [2] ASCII code(50)
+

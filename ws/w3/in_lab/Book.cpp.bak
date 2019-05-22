@@ -1,0 +1,39 @@
+/***********************************************************************
+// OOP244 Workshop 3
+// Student Name: Ryeoeul Ko
+// Section Name: OOP244SAA
+// Date 2019/01/31
+/////////////////////////////////////////////////////////////////
+***********************************************************************/
+#include "Book.h"
+#include <cstring>
+#include <iostream>
+
+namespace sict {
+	char afamilyName[max_name_size] = "";
+	char agivenName[max_name_size] = "";
+	char atitle[max_title_size] = "";
+	double aisbn = -1;
+	void Book::set(const char* familyName, const char* givenName, const char* title, double isbn)
+	{
+		if (isbn > max_isbn || isbn < min_isbn)
+		{
+			aisbn = -1;
+			return;
+		}
+		else {
+			aisbn = isbn;
+		}
+		strncpy(afamilyName, familyName, max_name_size + 1);
+		strncpy(agivenName, givenName, max_name_size + 1);
+	}
+	bool Book::isEmpty() const {
+		if (aisbn == -1) return true;
+		else return false;
+	}
+	void Book::display() const{
+		std::cout << "Author: " << afamilyName << ", " << agivenName << std::endl;
+		std::cout << "Title: " << atitle << std::endl;
+		std::cout << "ISBN-13: " << aisbn << std::endl;
+	}
+}

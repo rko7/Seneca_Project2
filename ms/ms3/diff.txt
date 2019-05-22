@@ -1,0 +1,14 @@
+In line number 219 of your output:
+The output should be:
+        object content: [Only (Y)es or (N)o are acceptable!]
+                                                          ^
+But your output is: 
+        object content: [Only (Y)es or (N)o are acceptable]
+                                                          ^
+
+Unmatched character details:
+The character in column 59 is supposed to be:
+  [!] ASCII code(33)
+but you printed
+  []] ASCII code(93)
+

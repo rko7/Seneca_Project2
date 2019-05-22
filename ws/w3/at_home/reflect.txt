@@ -1,0 +1,33 @@
+I have selected long long type for ISBN because there are two types available 
+when viewing a given data site, which are double and long long (same as _int 64)
+. But when we look the in_lab main module part which shows the ISBN number, you
+can find LL after the number. This is to make sure you to use the long long, not
+double.
+Rather than update the book :: set (...) function directly, create a new member
+function that only takes care of the newly updated validation logic and create 
+the logic to validate the ISBN there.
+A class is the same as the basic form for creating objects in object-oriented 
+programming. It is a collection of data and functions that are made into 
+a single data type. A class is a template that contains member variables and 
+member functions. An object is a class variable created from a class, and is 
+a concept that includes both data and its associated operations, for example, 
+procedures and method functions. Encapsulation is a grouping of related data 
+and functions into a single unit. It encapsulates the remaining parts except 
+the promised parts and hides them. Encapsulation also provides access specifiers 
+such as private, public, and protect to control access to information that does 
+not need to be known outside of the class, thereby distinguishing the members to 
+be hidden. This is used to increase the stability of the object. Normally, 
+variables in a class are accessed by blocking access to external objects and 
+defining methods in public. The reason for using encapsulation is that it is 
+more convenient to modify the program if the related functions and data are 
+gathered when the program is modified.
+
+Quiz 3 Reflection
+2. Describe the concept of encapsulation in one sentence.
+Had to write MEMBER FUNCTIOS instead of just functions
+(Correct Answer)
+Encapsulation allowed us to include data members and member functions in one class.
+6. Describe the characteristics of a well-encapsulated C++ class in one sentence.
+Didnt finish the complete sentence.
+(Correct Answer)
+The implementation and the logic of the class does not show in the client code.

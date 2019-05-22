@@ -1,0 +1,29 @@
+The operators use local variables that are used only by functions. After 
+function has ran, the life cycle of the variable is over and it will be 
+terminated. So if return a reference to a variable which is not a copy, it 
+returns a reference to the end variable. Then the garbage value will be 
+generated. This is why we should not return a reference to a Fraction object.
+For the temporary objects in the tester module I used "greater", "lesser", "mn",
+"mx", "g_c_d", "found", "cOr", "rGcd", "oNumerator", "oDenominator".
+I used isEmpty() and reduce() to minimize duplication.
+The c ++ language allows operators to be defined on objects, allowing operators 
+to be redefined for objects. So you can make certain operators have multiple 
+meanings. This is 'operator overloading'. When a function is overloaded, it 
+provides various functions with the same number of overloaded numbers. They are 
+separated by the number of arguments and the data type of the arguments. 
+Likewise, operator overloading adds other functionality beyond the existing 
+functionality of the existing operator. The overloading of operators is 
+necessary because of the appearance of objects. Existing operators (+, -, *, /,
+%, + =, == etc.) are those that could be applied to basic datatypes. Operator 
+Overloading allows you to define operators that target objects. That is, when 
+the operator is overloaded, the operation method is changed according to the 
+operand. The return value in the overloading function can be changed flexibly 
+considering the data types after the operation and subsequent operations. For 
+example, if you need additional operations, you need to change the function 
+prototype and return value to return a reference. When overloading operators, it
+is better to avoid types that are beyond the original intent. Otherwise, the 
+code gets rather confused. Operator priorities and associativity do not change,
+and overloading functions can not set defaults for parameters. It also can not 
+take away the original function of the operator. In the case of the increment 
+and decrement operators, the function must be created by separating the 
+potential and posterior operations.

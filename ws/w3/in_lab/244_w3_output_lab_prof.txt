@@ -1,0 +1,21 @@
+Script started on Sat 26 Jan 2019 03:50:06 PM EST
+[38;5;9mBegin Testing the Program!
+--------------------------[0m
+
+Book Management App
+===================
+Testing that validation and display are correct:
+------------------------------------------------
+The book object is empty!
+The Book::isEmpty() should return true --> correct
+The book object is empty!
+The Book::isEmpty() should return true --> correct
+Author: Herbert, Frank
+Title: Dune
+ISBN-13: 9780441172719
+The Book::isEmpty() should return false --> correct
+
+[38;5;9m------------------------
+End Testing the Program![0m
+
+Script done on Sat 26 Jan 2019 03:50:06 PM EST

@@ -1,0 +1,14 @@
+In line number 212 of your output:
+The output should be:
+                   tmp: 2022/10/22
+                                ^
+But your output is: 
+                   tmp: 2022/10/0-3
+                                ^
+
+Unmatched character details:
+The character in column 33 is supposed to be:
+  [2] ASCII code(50)
+but you printed
+  [0] ASCII code(48)
+

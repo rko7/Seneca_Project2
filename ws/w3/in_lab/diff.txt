@@ -1,0 +1,14 @@
+In line number 13 of your output:
+The output should be:
+Author: Herbert, Frank
+        ^
+But your output is: 
+Author: Frank, Herbert
+        ^
+
+Unmatched character details:
+The character in column 9 is supposed to be:
+  [H] ASCII code(72)
+but you printed
+  [F] ASCII code(70)
+

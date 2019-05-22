@@ -1,0 +1,50 @@
+Dynamic memory can be thought of as an address which points to static memory. 
+When we size the memory, it is stored in the static memory. Therefore, if we 
+change its size, we need to allocate new dynamic memory for the entire array.
+Dynamically allocated memory has no scope. That is, it remains allocated until 
+explicitly deallocated or the program terminates. However, pointers used to 
+maintain dynamically allocated memory addresses follow the general variable 
+scope rules. This discrepancy can cause errors such as Memory Leak. Memory leaks
+occur when a program loses some bit addresses in dynamically allocated memory 
+before returning to the operating system. When this happens, the program cannot
+release dynamically allocated memory because the program does not know the 
+dynamically allocated memory again. The operating system can not use this memory
+because it is still in use by the program. 
+When deleting dynamically allocated arrays, we must use the delete [] statement
+instead of delete. This tells the CPU that multiple variables need to be cleaned
+up instead of a single variable. Otherwise only the first element of the array 
+will be deallocated and the other elements are inaccessible, which can lead to a
+memory leak. However, CellPhone has a static memory which you do not have to 
+worry about issues such as memory leaks caused by not releasing static memory. 
+Static memory is not freed during execution, and the operating system recovers 
+when the program terminates.
+Function overloading means that several different functions share the same 
+function name. As a condition of this,
+- Overloading occurs when the number of parameters or data type is different.
+- If the return type is different from the condition that the number of 
+parameters and data type match, this is not established.
+The compiler knows which definition to call from your main function with 
+function signatures which are the function identifier, the parameter types and 
+their order.
+
+References
+(n.d.). Retrieved January 27, 2019, from https://scs.senecac.on.ca/~oop244/pages/content/rudim.html#fun
+
+
+Quiz 2 Reflection:
+2. What is passed to a C++ reference parameter?
+I couldn't answer for this.
+[Correct Answer]
+Reference parameter is another name of variable's address by using &. The parameter passes the address.
+Write down a piece of C++ code that 
+a)allocates memory, 
+b) stores the string "Strom" and deallocates the memory storage.
+
+I tried to initialize the array but I forgot to put = " "
+So I tried to write char weather[6] = " "; but I only write char weather[6]
+
+[Correct Answer]
+char *pweather;
+pweather = new char[6];
+strcpy(pweather, "Storm");
+delete[] pweather;

@@ -1,0 +1,27 @@
+Script started on Sat 19 Jan 2019 04:57:27 PM EST
+[38;5;9mBegin Testing the Program!
+--------------------------[0m
+
+==========
+Input data
+==========
+Enter the number of phones: 2
+Phone #1: 
+Enter the model of the Phone: Pixel2
+Enter the price for phone Pixel2: 759
+Phone #2: 
+Enter the model of the Phone: iPhoneX
+Enter the price for phone iPhoneX: 1284.99
+==========
+
+------------------------------
+The 1st phone entered is
+------------------------------
+Phone Pixel2 costs $759!
+------------------------------
+
+
+[38;5;9m------------------------
+End Testing the Program![0m
+
+Script done on Sat 19 Jan 2019 04:58:10 PM EST

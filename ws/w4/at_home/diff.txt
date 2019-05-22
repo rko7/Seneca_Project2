@@ -1,0 +1,14 @@
+In line number 10 of your output:
+The output should be:
+Traveler 2: not valid
+            ^
+But your output is: 
+Traveler 2: valid
+            ^
+
+Unmatched character details:
+The character in column 13 is supposed to be:
+  [n] ASCII code(110)
+but you printed
+  [v] ASCII code(118)
+

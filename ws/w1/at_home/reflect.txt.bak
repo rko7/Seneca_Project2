@@ -1,0 +1,33 @@
+The purpose of using namespace is to prevent conflict of function. Namespace can
+be specified once more inside the declaration. Also std is a namespace assgined
+to a specific space. ::, the scope resolution operator helps to identify and 
+specify the context to which an identifier refers. 'Using' minimizes the use of
+'std::'. When we enter a namespace to use after 'using', the namespace will be
+referenced first. We use header files to provide function prototypes and 
+definition for library functions. When we use 'cout << "something"', the 
+"something" is passed to the parameter and output. When outputting a variable,
+just put a variable between << and <<. In c++, cout prints according to the data
+type. Since header files are included by the preprocessor, they are not compiled on
+their own. The reason why you should never include .cpp files in another file is
+if you include .cpp files in other file, the compiler will try to compile the
+.cpp file multiple times. The compilation will take longer if you edit in 
+#include .cpp files because it will be forced to recompile any files including 
+the files. That will cause errors as there will be multiple implements of the
+same methods.
+
+
+Quiz 1 Reflection:
+1. What is the purpose of using a namespace
+   I wrote "to avoid function overlapping conflict"
+   (Correct)To avoid name conflict
+2. What is the purpose of using the scope resolution operator?
+   (Correct)Couldn't write answer
+   To precede its identifier with the namespace's identifier and separate them.
+3. Complete the source code of main_app.cpp.
+   (Correct)
+   #include <iostream>
+   #include "hello.h"
+   using namespace std;  <-  I missed these two
+   using namespace storm;  <-  I missed these two
+4. Write down the matrix/Linux command that compiles the above two modules together
+   (Correct)g++ hello.cpp main_app.cpp   <- I wrote hello.cpp as hello.h

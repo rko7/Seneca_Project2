@@ -1,0 +1,14 @@
+In line number 12 of your output:
+The output should be:
+Enter number of samples on hand: 3
+                                 ^
+But your output is: 
+Enter number of samples on hand: 2
+                                 ^
+
+Unmatched character details:
+The character in column 34 is supposed to be:
+  [3] ASCII code(51)
+but you printed
+  [2] ASCII code(50)
+

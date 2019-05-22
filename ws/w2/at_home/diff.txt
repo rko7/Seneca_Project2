@@ -1,0 +1,14 @@
+In line number 38 of your output:
+The output should be:
+The cheapest phone costs $719.99.
+                          ^
+But your output is: 
+The cheapest phone costs $ 719.99.
+                          ^
+
+Unmatched character details:
+The character in column 27 is supposed to be:
+  [7] ASCII code(55)
+but you printed
+  [Space] ASCII code(32)
+

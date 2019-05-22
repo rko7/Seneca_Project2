@@ -1,0 +1,23 @@
+An abstract class can't be instantiated while a concrete one can. Also abstract
+class is one that has one or more pure virtual function but a concrete class has
+no pure virtual functions.
+It is because Product class definition publicly inherit from the interface 
+iProduct. And SavingsAccount or ChequingAccount classes definitions publicly 
+inherit from the Product.
+If there is no declared virtual destructor, the compiler decides to bind 
+directly to the destructor, regardless of the value runtime type. Declares a 
+virtual destructor so that the correct destructor is called for a particular 
+instance of the type hierarchy of that type. This ensures that the instance is 
+properly cleaned up by the function that has the most knowledge of the instance.
+Function overrides occur when a class is inherited from another class. 
+Overriding is required if the derived class function is added to the base class 
+function or needs to do something else. Overloading can occur without 
+inheritance. Overloading is used to use the same name function that behaves 
+differently depending on the parameter passed. In the case of shadowing, you can 
+create a shadow in a derived class using the new keyword for the same virtual 
+member, and call the above implementation to call the base class implementation 
+when there is a reference to an object of the base class type, and if the 
+reference has the same This method is called when a member is invoked with a 
+reference of the base type or derived type, by invoking the object, a derived 
+type implementation, so that the base class and the derived class implementation 
+are hidden from each other.

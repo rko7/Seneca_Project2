@@ -1,0 +1,36 @@
+This is because the copy assignment operator deletes data from the current 
+object. So if we not self check it may cause duplication and delete the original
+data which lead to data loss.
+We must do direct call in the copy constructor before calling the copy 
+assignment operator because it resets the resource instance variable to nullptr 
+and directly call the copy assignment operator. Then the copy assignment 
+operator will modify its object.
+If the parameter of the copy constructor is sent by-value not by-reference, 
+infinite loop occurs. This means that when you create an object from outside, 
+the copy constructor is called to do so. However, the copy constructor is passed 
+by value without receiving the original reference. If the function receives a 
+parameter as a value, the parameter is copied to the calling side, which is 
+called again, and an infinite loop occurs.
+A copy constructor is a constructor that is called when creating a copy of an 
+object. It copies the information of another object and initializes its own 
+information. If you omit the copy constructor, the compiler will create a 
+default copy constructor. The copy constructor and objects of other classes 
+initialize parameter passing. The copy constructor exclusively handles the newly 
+created object and the original object. The parallel copy creator attempts to 
+copy and attempt to copy. The copy constructor is used when an object is passed 
+as an argument to a function, and when the function returns an object as a 
+return value, when a new object is initialized the same as an existing object 
+of the same class type. If the code does not have a copy constructor, the 
+compiler automatically generates an implicit copy constructor.
+If the code does not have a copy constructor, the compiler automatically 
+generates a default copy constructor.
+The implicit copy constructor thus created performs a shallow copy. Copies the 
+value of each member. The implicit copy constructor is created as shown in the 
+commented out code above. However, if you are allocating memory dynamically 
+within a class, a shallow copy is very likely to be dangerous. At this point, 
+the programmer must create a copy constructor and execute a deep copy. Make deep 
+copies when solving problems caused by shallow radiation. Each allocates memory 
+to solve the problem.  Instead of sharing one space with another, each one has 
+space.
+
+

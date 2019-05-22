@@ -1,0 +1,44 @@
+Safe empty state is the empty state that user defining whatever them to be and
+where the code know that an object has not been defined yet. We use this to make
+it easier to find empty variables without displaying garbage data. For instance,
+if we set a variable and if the user input or that variable is not valid, we can
+store the data in a safe empty state in variable 0.
+To minimized code duplication, I used isEmpty() to ensure that the Traveler 
+object is in a safe empty state for Traveler::display() const and Traveler::name(). 
+Also I used constructor and destructor to avoid code duplication.
+canTravelWith (...) is a member of the Traveler class. A reference to this 
+function object is an instance of the same class. Since it is implemented in a 
+class, a member function in a class can access private data members for each 
+instance (object) in the same class. A constructor means a member function that 
+automatically splits at the time the object is created. The purpose of using the 
+constructor function is to initialize the member variable. Resetting a member 
+variable through set() function can only be performed after the object is created, 
+but initialization through the constructor is performed automatically when the 
+object is created. Features of the constructor include that the constructor 
+function name is the same as the class name, being overloaded, and having no 
+return type. If you do not create the constructor, the default constructor is 
+automatically called, and there are no commands in the default constructor.
+The constructor not only initializes the object member, but also the external 
+environment to buy the object. Therefore, at the end of the object's life, the 
+member function that plays this role is also required, which is called the 
+destructor. The destructor is called by the compiler as the ruler at the end of
+the object's life, and it is used to clean up the object. An object can have 
+multiple constructors, but only one destructor.
+Instances created from one class in C++ each have its own member variable stored
+in an independent memory space, but the member function is shared by all 
+instances. So even if you create two instances, there is only one-member 
+function. For this reason, every member function in C++ has its own this pointer.
+*This points to the object that called the member function and passes it as a 
+hidden argument of the called member function. The recalled member function can 
+then pinpoint exactly what the object called it. However, the static member 
+function does not have this pointer.
+Like function overloading, operators have overloading. In C++, this concept of 
+overloading is expanded so that one operator can be used in many ways. Operator 
+overloading shows that you can extend to a user-defined type and the class is 
+one type. The advantage of operator functions is that you can use simple 
+operators instead of complex function names.
+
+Quiz 4 Reflection
+1.      What is the purpose of declaring member functions in a C++ Class?
+(Correct Answer)
+To allow the client code change or manipulate the private data members.
